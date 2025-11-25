@@ -16,3 +16,4 @@ jupyter-client>=8.6.3
 torch>=2.7.0
 transformers>=4.40.0
 safetensors>=0.5.3
+accelerate>=0.25.0

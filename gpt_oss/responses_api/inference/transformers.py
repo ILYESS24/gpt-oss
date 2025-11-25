@@ -21,8 +21,8 @@ def load_model(checkpoint: str):
 
     model = AutoModelForCausalLM.from_pretrained(
         checkpoint,
-        torch_dtype=torch.bfloat16,
-        device_map="auto",
+        torch_dtype=torch.float32,  # Use float32 for CPU
+        device_map={"": "cpu"},     # Force CPU usage
     )
 
     return model
