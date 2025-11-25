@@ -8,4 +8,6 @@ services:
         value: 8000
       - key: INFERENCE_BACKEND
         value: transformers
+      - key: CHECKPOINT_PATH
+        value: microsoft/DialoGPT-small
     plan: starter

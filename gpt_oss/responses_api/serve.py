@@ -16,8 +16,8 @@ if __name__ == "__main__":
         "--checkpoint",
         metavar="FILE",
         type=str,
-        help="Path to the SafeTensors checkpoint",
-        default="~/model",
+        help="Path to the SafeTensors checkpoint or HuggingFace model name",
+        default="microsoft/DialoGPT-small",
         required=False,
     )
     parser.add_argument(
