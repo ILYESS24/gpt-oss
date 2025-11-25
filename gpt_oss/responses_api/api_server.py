@@ -1132,6 +1132,14 @@ def create_api_server(
                     )
                 )
 
+    @app.get("/health")
+    async def health_check():
+        return {"status": "healthy", "backend": "stub", "timestamp": datetime.datetime.now().isoformat()}
+
+    @app.get("/")
+    async def root():
+        return {"message": "GPT-OSS API Server", "status": "running", "backend": "stub"}
+
     @app.post("/v1/responses", response_model=ResponseObject)
     async def generate(body: ResponsesRequest, request: Request):
         print("request received")
