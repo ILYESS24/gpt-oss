@@ -1,0 +1,15 @@
+# Variables d'environnement pour GPT-OSS
+# Copiez ceci dans Render Dashboard → Environment
+
+PORT=8000
+
+# Backend d'inference à utiliser
+# Options: stub, triton, metal, vllm, transformers, ollama
+INFERENCE_BACKEND=stub
+
+# Chemin vers le modèle SafeTensors (si vous en avez un)
+# CHECKPOINT_PATH=/path/to/model
+
+# Configuration pour les outils (optionnel)
+# BROWSER_BACKEND=exa  # ou youcom
+# OPENAI_API_KEY=your_key_here
