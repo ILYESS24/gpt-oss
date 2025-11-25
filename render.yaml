@@ -6,6 +6,6 @@ services:
     envVars:
       - key: PORT
         value: 8000
+      - key: INFERENCE_BACKEND
+        value: transformers
     plan: starter
-    # Force stub backend to avoid torch dependency issues
-    startCommand: "python -m gpt_oss.responses_api.serve --port $PORT --inference-backend stub"

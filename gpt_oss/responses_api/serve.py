@@ -32,8 +32,8 @@ if __name__ == "__main__":
         metavar="BACKEND",
         type=str,
         help="Inference backend to use",
-        # default to stub (no dependencies) for deployment environments
-        default="stub",
+        # default to transformers for production (real AI responses)
+        default="transformers",
     )
     args = parser.parse_args()
 
