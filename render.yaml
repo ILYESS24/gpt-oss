@@ -7,3 +7,5 @@ services:
       - key: PORT
         value: 8000
     plan: starter
+    # Force stub backend to avoid torch dependency issues
+    startCommand: "python -m gpt_oss.responses_api.serve --port $PORT --inference-backend stub"

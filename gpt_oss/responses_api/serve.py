@@ -32,8 +32,8 @@ if __name__ == "__main__":
         metavar="BACKEND",
         type=str,
         help="Inference backend to use",
-        # default to metal on macOS, triton on other platforms
-        default="metal" if __import__("platform").system() == "Darwin" else "triton",
+        # default to stub (no dependencies) for deployment environments
+        default="stub",
     )
     args = parser.parse_args()
 

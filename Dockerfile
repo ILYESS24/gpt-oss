@@ -24,4 +24,4 @@ RUN pip install -e .
 EXPOSE 8000
 
 # Default command (can be overridden by environment)
-CMD ["python", "-m", "gpt_oss.responses_api.serve", "--port", "8000", "--inference-backend", "stub"]
+CMD ["python", "-m", "gpt_oss.responses_api.serve", "--port", "8000"]
